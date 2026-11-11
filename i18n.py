@@ -1,7 +1,7 @@
 # Language registry. Add a language by setting live=True once its folder is built.
 LANGS=[('en','EN','English','',True),('th','TH','ไทย','/th',True),
 ('fr','FR','Français','/fr',True),('es','ES','Español','/es',True),
-('de','DE','Deutsch','/de',True),('pt','PT','Português','/pt',True),('ru','RU','Русский','/ru',True)]
+('de','DE','Deutsch','/de',True),('pt','PT','Português','/pt',True),('ru','RU','Русский','/ru',True),('he','HE','עברית','/he',True)]
 SITE='https://pelvispower.org'
 def live(): return [l for l in LANGS if l[4]]
 def strip(path):
