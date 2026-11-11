@@ -82,7 +82,7 @@ def P(ps): return ''.join(f'<p>{E(p)}</p>' for p in ps)
 # ---------- Home
 home=f'''<section class="herow"><img class="cover" src="/assets/cover.jpg" alt="PelvisPower for Women: a superhero in a yoga outfit with a gold PP medal"><div>
 <p class="kick">A 30-day sexercise course</p><h1>PelvisPower</h1><p class="sub">Train the muscles that run your pleasure.</p>
-<p>Thirty days. Twelve moves. One happy pelvic floor. A friendly personal trainer for the muscles behind arousal, sensation and orgasm, with a little bladder confidence and a happier back thrown in.</p>
+<p>Thirty days. Twelve moves. One happy pelvic floor. A friendly personal trainer for the muscles behind arousal, sensation and orgasm, with bladder confidence and a happier lower back thrown in for good measure.</p>
 <p>Clothes stay on, nothing goes inside, and three to ten minutes a day is plenty.</p>
 <p><a class="btn" href="/women/start-here/">Start the month</a> <a class="btn alt" href="/women/">See all 30 days</a></p></div></section>
 <section class="three"><a class="card" href="/women/"><h2>For Women</h2><p>The full 30-day course, every Day open to read, with the pictograms, a printable chart and your three numbers.</p></a>
