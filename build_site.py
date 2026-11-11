@@ -107,7 +107,7 @@ sh='<p class="kick">PelvisPower for Women</p><h1>Start Here</h1><p class="sub">W
 for h,b in START:
     if h=='THE DAILY DOZEN':
         sh+=f'<h2>{tc(h)}</h2><p>Twelve moves, learned once and polished all month. <a href="/women/dozen/">See them with pictograms.</a></p>'; continue
-    sh+=f'<h2>{tc(h)}</h2>'+P(paras(b))
+    sh+=f'<h2 id="{re.sub(r"[^a-z]+","-",h.lower()).strip("-")}">{tc(h)}</h2>'+P(paras(b))
 sh+='</article><p class="c"><a class="btn" href="/women/day-01/">Begin with Day 1</a></p>'
 page('/women/start-here/','Start Here | PelvisPower for Women','What the course does for you, how the month works, and how to train alone, in pairs or in a class.',sh,active='/women/')
 # ---------- Dozen
@@ -125,7 +125,7 @@ for n,d in DAYS.items():
     for p in d['read']:
         if p.startswith('Form check:'): b+=f'<p class="form"><b>Form check</b>{E(p[11:].strip().capitalize() if False else (p[11:].strip()[0].upper()+p[11:].strip()[1:]))}</p>'
         else: b+=f'<p>{E(p)}</p>'
-    b+='</article><div class="set"><h2>Today\'s Set</h2><dl>'
+    b+='</article><p class="period"><b>On your period?</b> Power through, go gentle, swap in a Recess or pause. It is your call. <a href="/women/start-here/#during-your-period">See the options.</a></p><div class="set"><h2>Today\'s Set</h2><dl>'
     extra=''
     for l in d['set']:
         m=re.match(r'^(Time|Position|Garment|Warm-up|Cool-down|Pleasure Dial|Variation|Move \d+, [^:]+|Test \d+, [^:]+|The Recess|The routine|The three numbers, each with a Soft Drop between|THE LOG):\s*(.*)$',l)
