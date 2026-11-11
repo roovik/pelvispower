@@ -1,4 +1,6 @@
-import re,os,html,shutil,json
+import re,os,html,shutil,json,sys
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+import i18n
 SRC='/home/claude/PelvisPower-for-Women_Draft_30-Days.txt'
 OUT='/home/claude/pelvispower/public'
 E=html.escape
@@ -66,8 +68,8 @@ def page(path,title,desc,body,active='',extra_head='',main_class=''):
     h=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><meta name="rating" content="adult"><meta name="robots" content="index,follow">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:image" content="https://pelvispower.org/assets/cover.jpg"><meta name="theme-color" content="#4a1a35">
-<link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{extra_head}</head><body>
-<header class="top"><a class="brand" href="/">PelvisPower</a><nav>{nav(active)}</nav></header>
+<link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{'' if path=='/404.html' else i18n.alternates(path)}{extra_head}</head><body>
+<header class="top"><a class="brand" href="/">PelvisPower</a><nav>{nav(active)}</nav>{'' if path=='/404.html' else i18n.switcher(path,'en')}</header>
 <div id="agegate" hidden><div><h2>Adults only</h2><p>This site is for readers 18 and over and talks about sexual pleasure and sexual health.</p><button id="yes">I am 18 or older</button> <a href="https://www.google.com">Leave</a></div></div>
 <main class="{main_class}">{body}</main>
 <footer><p>PelvisPower, by R. J. Koret. Part of <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Companion to <a href="https://dressforcaress.com/">Dress for Caress</a>.</p>
@@ -194,7 +196,8 @@ tg='''<p class="kick">Better together</p><h1>Train Together</h1><p class="sub">S
 page('/two/','Train Together | PelvisPower','Train with a partner, a friend or a small class, and pair PelvisPower with Dress for Caress.',tg,active='/two/')
 page('/404.html','Not found | PelvisPower','Page not found','<h1>Not found</h1><p class="sub">That page took a Soft Drop.</p><p class="c"><a class="btn" href="/">Home</a></p>')
 # sitemap
-sm='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://pelvispower.org{p}</loc></url>' for p in PAGES if p!='/404.html')+'</urlset>'
+TH=json.load(open('/home/claude/pelvispower/th_pages.json')) if os.path.exists('/home/claude/pelvispower/th_pages.json') else []
+sm='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://pelvispower.org{p}</loc></url>' for p in PAGES+TH if not p.endswith('404.html'))+'</urlset>'
 open(OUT+'/sitemap.xml','w').write(sm)
 open(OUT+'/robots.txt','w').write('User-agent: *\nAllow: /\nSitemap: https://pelvispower.org/sitemap.xml\n')
 print(len(PAGES),'pages')

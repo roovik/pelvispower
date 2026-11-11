@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif+Thai:wght@500;700&display=swap');
 :root{--plum:#6d1f3a;--deep:#4a1a35;--gold:#b98a3e;--ink:#2a1a20;--mute:#7a6a70;--bg:#fffdfb;--rose:#f8eaee;--sand:#f6efe4;--pink:#e0507a}
 @media(prefers-color-scheme:dark){:root{--ink:#f1e6ea;--bg:#1b1115;--rose:#2a1a21;--sand:#2a2119;--mute:#b7a5ab;--plum:#e7a6bd}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 Georgia,'Times New Roman',serif}
@@ -41,3 +41,16 @@ article ul{padding-left:1.2em}article li{margin:.5em 0}
 @media print{.top,footer,.noprint,#agegate{display:none!important}body{background:#fff;color:#000;font-size:12px}.ccell{break-inside:avoid}.ic{width:40px;height:40px}}
 
 .period{background:var(--sand);border-radius:8px;padding:10px 16px;font:15px/1.5 system-ui,sans-serif;margin:24px 0 0}.period b{color:var(--plum)}
+
+/* language switcher */
+.lang{display:flex;gap:.25rem;margin-left:auto;align-items:center}
+.lang a{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .45rem;border-radius:6px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-decoration:none;color:inherit;border:1px solid transparent;opacity:.85}
+.lang a:hover{opacity:1;border-color:currentColor}
+.lang a.on{opacity:1;border-color:var(--gold,#c9a24b)}
+.lang img{width:20px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+@media(max-width:640px){.top{flex-wrap:wrap}.lang{width:100%;margin-left:0;justify-content:flex-end}}
+/* Thai */
+html[lang=th] body{font-family:"Noto Sans Thai","Noto Sans",system-ui,sans-serif;line-height:1.85}
+html[lang=th] h1,html[lang=th] h2,html[lang=th] h3,html[lang=th] .sub{font-family:"Noto Serif Thai","Noto Serif",serif;line-height:1.5}
+html[lang=th] .brand{font-family:"Great Vibes",cursive}
+html[lang=th] .kick{letter-spacing:0;text-transform:none}
