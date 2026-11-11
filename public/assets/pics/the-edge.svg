@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+<path fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(85.096741%, 78.430176%, 80.783081%)" stroke-opacity="1" stroke-miterlimit="10" d="M 8 18 L 92 18 " transform="matrix(1, 0, 0, -1, 0, 100)"/>
+<path fill-rule="evenodd" fill="rgb(42.744446%, 12.156677%, 22.744751%)" fill-opacity="1" d="M 20 73 C 20 69.6875 17.3125 67 14 67 C 10.6875 67 8 69.6875 8 73 C 8 76.3125 10.6875 79 14 79 C 17.3125 79 20 76.3125 20 73 "/>
+<path fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(42.744446%, 12.156677%, 22.744751%)" stroke-opacity="1" stroke-miterlimit="10" d="M 22 24 L 52 24 " transform="matrix(1, 0, 0, -1, 0, 100)"/>
+<path fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(42.744446%, 12.156677%, 22.744751%)" stroke-opacity="1" stroke-miterlimit="10" d="M 52 24 L 66 44 L 80 24 " transform="matrix(1, 0, 0, -1, 0, 100)"/>
+<path fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(42.744446%, 12.156677%, 22.744751%)" stroke-opacity="1" stroke-miterlimit="10" d="M 24 23 L 44 21 " transform="matrix(1, 0, 0, -1, 0, 100)"/>
+<path fill-rule="evenodd" fill="rgb(94.900513%, 86.273193%, 64.312744%)" fill-opacity="1" d="M 60.5 76 C 60.5 71.304688 56.695312 67.5 52 67.5 C 47.304688 67.5 43.5 71.304688 43.5 76 C 43.5 80.695312 47.304688 84.5 52 84.5 C 56.695312 84.5 60.5 80.695312 60.5 76 "/>
+<path fill-rule="evenodd" fill="rgb(72.547913%, 54.116821%, 24.313354%)" fill-opacity="1" d="M 57.5 76 C 57.5 72.960938 55.039062 70.5 52 70.5 C 48.960938 70.5 46.5 72.960938 46.5 76 C 46.5 79.039062 48.960938 81.5 52 81.5 C 55.039062 81.5 57.5 79.039062 57.5 76 "/>
+<path fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(75.292969%, 31.37207%, 43.136597%)" stroke-opacity="1" stroke-miterlimit="10" d="M 30 52 C 52 54 62 70 86 84 " transform="matrix(1, 0, 0, -1, 0, 100)"/>
+<path fill-rule="evenodd" fill="rgb(75.292969%, 31.37207%, 43.136597%)" fill-opacity="1" d="M 86 20 C 74 10 82 0 86 6 C 90 0 98 10 86 20 "/>
+</svg>

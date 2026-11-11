@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pelvispower.org/sitemap.xml

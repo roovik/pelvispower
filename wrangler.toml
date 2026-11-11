@@ -1,0 +1,7 @@
+name = "pelvispower"
+compatibility_date = "2026-10-01"
+
+# Pure static site. Attach pelvispower.org (and pelvispower.com) to this Worker in the Cloudflare dashboard.
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
