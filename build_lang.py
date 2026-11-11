@@ -41,7 +41,7 @@ def nav(active=''):
 PAGES=[]
 def page(path,title,desc,body,active='',main_class=''):
     full=PRE+path
-    h=f'''<!doctype html><html lang="{CODE}" dir="{T['dir']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    h=f'''<!doctype html><html lang="{CODE}" dir="{T['dir']}" translate="no"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><meta name="rating" content="adult"><meta name="robots" content="index,follow">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:image" content="https://pelvispower.org/assets/cover.jpg"><meta name="theme-color" content="#4a1a35">
 <link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{'' if path=='/404.html' else i18n.alternates(full)}</head><body>
