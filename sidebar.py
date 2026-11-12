@@ -81,6 +81,16 @@ def men_titles():
     return d
 
 
+def scrape_levels():
+    out = {}
+    for l in LANGS:
+        p = f'{PP}/public{PRE[l]}/women/index.html'
+        if os.path.exists(p):
+            out[l] = re.findall(r'<section class="lvl"><h2>(.*?)</h2>', read(p))
+    return out
+
+
+LV = scrape_levels()
 DF = scrape_dfc()
 PW = scrape_pp()
 MEN = men_titles()
@@ -132,9 +142,12 @@ def dfc_list(l, cur, t):
 
 def pp_list(l, cur, t, heading):
     items = PW.get(l) or PW['en']
+    lv = LV.get(l) or LV['en']
     li = ''
     for n in range(1, 31):
         title, h = items.get(n, ('', ''))
+        if (n - 1) % 6 == 0 and len(lv) >= (n - 1) // 6 + 1:
+            li += ('</ol>' if n > 1 else '') + f'<h3 class="lv">{lv[(n - 1) // 6]}</h3><ol>'
         href = '/women/day-%02d/' % n
         pre = PRE[l] if l in PW else ''
         href = f'{pre}{href}'
@@ -142,12 +155,17 @@ def pp_list(l, cur, t, heading):
             href = '/women/day-%02d/' % n
         cls = ' class="cur" aria-current="page"' if n == cur else ''
         li += f'<li{cls}><a href="{href}"><b>{n}</b><span>{title}</span></a></li>'
-    return f'<div class="sw days"><h2>{e(heading)}</h2><ol>{li}</ol></div>'
+    return f'<div class="sw days"><h2>{e(heading)}</h2>{li}</ol></div>'
 
 
-def men_list(t):
-    li = ''.join(f'<li><span class="nolink"><b>{n}</b><span lang="en">{e(MEN.get(n, ""))}</span></span></li>' for n in range(1, 31))
-    return f'<div class="sw days"><h2>{e(t["men_h"])}</h2><ol>{li}</ol></div>'
+def men_list(l, t):
+    lv = LV.get(l) or LV['en']
+    li = ''
+    for n in range(1, 31):
+        if (n - 1) % 6 == 0 and len(lv) >= (n - 1) // 6 + 1:
+            li += ('</ol>' if n > 1 else '') + f'<h3 class="lv">{lv[(n - 1) // 6]}</h3><ol>'
+        li += f'<li><span class="nolink"><b>{n}</b><span lang="en">{e(MEN.get(n, ""))}</span></span></li>'
+    return f'<div class="sw days"><h2>{e(t["men_h"])}</h2>{li}</ol></div>'
 
 
 def side_dfc(l, cur):
@@ -178,7 +196,7 @@ def side_pp(l, kind, cur):
     if kind == 'men':
         top = (f'<div class="sw card men"><p class="sk">{e(t["soon"])}</p><p class="st">PelvisPower, {e(t["m"])}</p><p class="sb">{e(t["men_b"])}</p></div>')
         her = card('her', t['her_k'], t['her_cta'], t['her_b'], t['her_cta'], f'https://pelvispower.org{PRE[l] if l in PW else ""}/women/')
-        return top + men_list(t) + her
+        return top + men_list(l, t) + her
     wl = f'{PRE[l]}/women/'
     ml = f'{PRE[l]}/men/'
     tl = f'{PRE[l]}/two/'
@@ -295,7 +313,8 @@ CSS = r'''
 .sw .prog i{display:block;height:100%;background:var(--gold)}
 .sw .pt{margin:0 0 10px;font-size:12px;color:var(--mute)}
 .sw.days h2{margin:0 0 8px;font:600 13px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
-.sw.days ol{list-style:none;margin:0;padding:0}
+.sw.days ol{list-style:none;margin:0 0 6px;padding:0}
+.sw.days h3.lv{margin:14px 0 4px;font:600 13px/1.3 Georgia,serif;color:var(--plum)}
 .sw.days li{border-top:1px solid var(--rose);display:flex;align-items:baseline;gap:8px}
 .sw.days li a,.sw.days li .nolink{flex:1;display:flex;gap:8px;padding:6px 4px;color:var(--ink);text-decoration:none;min-width:0}
 .sw.days li b{flex:0 0 1.6em;font-weight:600;color:var(--gold);text-align:end}
