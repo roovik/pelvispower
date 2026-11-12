@@ -194,7 +194,9 @@ def side_dfc(l, cur):
     else:
         head = card('pp', t['comp_k'], 'PelvisPower', t['pp_b'], t['pp_cta'], 'https://pelvispower.org' + (PRE[l] + '/women/' if l in PW else '/women/'))
     cover = f'<a class="scov" href="{PRE[l] if l in DF else ""}/"><img src="/assets/cover-sm.jpg" width="210" height="315" alt="Dress for Caress, book cover"></a>'
-    return cover + '<p class="sh" lang="en">Dress for Caress: 30 Days to Peak Pleasure</p>' + head + dfc_list(l, cur, t)
+    ppc = (f'<a class="scov" href="{pp_href(l, cur) if cur else "https://pelvispower.org" + (PRE[l] + "/women/" if l in PW else "/women/")}" rel="noopener"><img src="/assets/pp-cover-sm.jpg" width="210" height="315" alt="PelvisPower for Women, book cover"></a>')
+    head = head.replace('<p class="st">PelvisPower</p>', '<p class="st">' + e(t['her_cta']) + '</p>').replace('<div class="sw card pp">', '<div class="sw card pp">' + ppc, 1)
+    return head + cover + '<p class="sh" lang="en">Dress for Caress: 30 Days to Peak Pleasure</p>' + dfc_list(l, cur, t)
 
 
 def side_pp(l, kind, cur):
@@ -356,6 +358,8 @@ CSS = r'''
 .sw .paths{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
 .sw .paths a{display:inline-block;padding:7px 13px;border-radius:999px;border:1px solid var(--plum);color:var(--plum);text-decoration:none;font-weight:600}
 @media(max-width:940px){.shell{display:block}.side{margin-top:0}}
+/*fig cutout*/
+.hero.art{box-shadow:none;border-radius:0;background:transparent;filter:drop-shadow(0 12px 18px rgba(60,10,30,.28))}
 @media print{.side{display:none}.shell{display:block}}
 '''
 
