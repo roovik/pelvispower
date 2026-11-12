@@ -72,20 +72,19 @@ html[lang=he] body{font-size:1.08em;line-height:1.75}
 .shell .col{min-width:0}
 .shell main,.shell main.wide{max-width:none;margin:0;padding-left:0;padding-right:0}
 .shell .dgrid{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
-.side{align-self:start;padding:24px 0 48px;font:14px/1.4 system-ui,sans-serif}
+:root{--side:#fbf3f5}@media(prefers-color-scheme:dark){:root{--side:#261a20}}
+.side{align-self:start;margin-top:24px;padding:18px 16px 24px;background:var(--side);border-radius:16px;font:14px/1.4 system-ui,sans-serif}
 .side .sh{margin:0 0 12px;font:600 17px/1.25 Georgia,serif;color:var(--plum)}
-.sw{border:1px solid var(--rose);border-radius:14px;background:var(--bg);padding:14px 16px;margin-bottom:16px}
-.sw.card{background:var(--rose);border-color:transparent}
-.sw.card.dfc{background:var(--sand)}
+.sw{border:0;border-radius:0;background:transparent;padding:6px 0;margin-bottom:18px}
 .sw .sk{margin:0 0 4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .sw .st{margin:0 0 6px;font:600 20px/1.2 Georgia,serif;color:var(--plum)}
 .sw .sb{margin:0 0 12px;color:var(--ink)}
 .sw .sbtn{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--plum);color:var(--bg);text-decoration:none;font-weight:600}
 .sw .sbtn:hover{opacity:.88}
-.sw .pair{margin:0 0 10px;padding:8px 10px;border-radius:10px;background:var(--bg)}
+.sw .pair{margin:0 0 10px;padding:0 0 0 10px;border-inline-start:3px solid var(--gold)}
 .sw .pair span{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .sw .pair a{color:var(--plum);font-weight:600;text-decoration:none}
-.sw .prog{height:6px;border-radius:3px;background:var(--bg);overflow:hidden;margin:0 0 4px}
+.sw .prog{height:6px;border-radius:3px;background:var(--rose);overflow:hidden;margin:0 0 4px}
 .sw .prog i{display:block;height:100%;background:var(--gold)}
 .sw .pt{margin:0 0 10px;font-size:12px;color:var(--mute)}
 .sw.days h2{margin:0 0 8px;font:600 13px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
@@ -101,5 +100,5 @@ html[lang=he] body{font-size:1.08em;line-height:1.75}
 .sw .nolink{color:var(--mute)!important}
 .sw .paths{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
 .sw .paths a{display:inline-block;padding:7px 13px;border-radius:999px;border:1px solid var(--plum);color:var(--plum);text-decoration:none;font-weight:600}
-@media(max-width:940px){.shell{display:block}.side{padding-top:0}}
+@media(max-width:940px){.shell{display:block}.side{margin-top:0}}
 @media print{.side{display:none}.shell{display:block}}
