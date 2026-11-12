@@ -114,6 +114,7 @@ html[lang=he] body{font-size:1.08em;line-height:1.75}
 .sw .paths{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
 .sw .paths a{display:inline-block;padding:7px 13px;border-radius:999px;border:1px solid var(--plum);color:var(--plum);text-decoration:none;font-weight:600}
 @media(max-width:940px){.shell{display:block}.side{margin-top:0}}
+html:not([lang=en]) .sw.days li a>span{text-transform:lowercase;display:block}html:not([lang=en]) .sw.days li a>span::first-letter{text-transform:uppercase}
 /*fig cutout*/
 .hero.art{box-shadow:none;border-radius:0;background:transparent;filter:drop-shadow(0 12px 18px rgba(60,10,30,.28))}
 @media print{.side{display:none}.shell{display:block}}
