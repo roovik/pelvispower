@@ -71,7 +71,7 @@ html[lang=he] body{font-size:1.08em;line-height:1.75}
 .shell{display:grid;grid-template-columns:minmax(0,720px) 300px;gap:32px;justify-content:center;max-width:1200px;margin:0 auto;padding:0 16px}
 .shell .col{min-width:0}
 .shell main,.shell main.wide{max-width:none;margin:0;padding-left:0;padding-right:0}
-.shell .dgrid{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
+.shell .dgrid{grid-template-columns:repeat(3,1fr)}@media(max-width:520px){.shell .dgrid{grid-template-columns:repeat(2,1fr)}}
 :root{--side:#fbf3f5}@media(prefers-color-scheme:dark){:root{--side:#261a20}}
 .side{align-self:start;margin-top:24px;padding:18px 16px 24px;background:var(--side);border-radius:16px;font:14px/1.4 system-ui,sans-serif}
 .side .sh{margin:0 0 12px;font:600 17px/1.25 Georgia,serif;color:var(--plum)}

@@ -68,8 +68,8 @@ def page(path,title,desc,body,active='',extra_head='',main_class=''):
     h=f'''<!doctype html><html lang="en" translate="no"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><meta name="rating" content="adult"><meta name="robots" content="index,follow">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:image" content="https://pelvispower.org/assets/cover.jpg"><meta name="theme-color" content="#4a1a35">
-<link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{'' if path=='/404.html' else i18n.alternates(path)}{extra_head}</head><body>
-<header class="top"><a class="brand" href="/">PelvisPower</a><nav>{nav(active)}</nav>{'' if path=='/404.html' else i18n.switcher(path,'en')}</header>
+<link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{'' if (path=='/404.html' or path.startswith('/men/') and path!='/men/') else i18n.alternates(path)}{extra_head}</head><body>
+<header class="top"><a class="brand" href="/">PelvisPower</a><nav>{nav(active)}</nav>{'' if path=='/404.html' else i18n.switcher('/men/' if path.startswith('/men/') else path,'en')}</header>
 <div id="agegate" hidden><div><h2>Adults only</h2><p>This site is for readers 18 and over and talks about sexual pleasure and sexual health.</p><button id="yes">I am 18 or older</button> <a href="https://www.google.com">Leave</a></div></div>
 <main class="{main_class}">{body}</main>
 <footer><p>PelvisPower, by R. J. Koret. Part of <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Companion to <a href="https://dressforcaress.com/">Dress for Caress</a>.</p>
@@ -88,7 +88,7 @@ home=f'''<section class="herow"><img class="cover" src="/assets/cover.jpg" alt="
 <p>Clothes stay on, nothing goes inside, and three to ten minutes a day is plenty.</p>
 <p><a class="btn" href="/women/start-here/">Start the month</a> <a class="btn alt" href="/women/">See all 30 days</a></p></div></section>
 <section class="three"><a class="card" href="/women/"><h2>For Women</h2><p>The full 30-day course, every Day open to read, with the pictograms, a printable chart and your three numbers.</p></a>
-<a class="card" href="/men/"><h2>For Men</h2><p>The same month for the muscles men have too. In preparation, with a preview of how it works.</p></a>
+<a class="card" href="/men/"><h2>For Men</h2><p>The same month for the muscles men have too. Thirty days, five Levels, every Day open to read.</p></a>
 <a class="card" href="/two/"><h2>Together</h2><p>Train with a friend, a partner or in a small class. Same Day, same mats, big smiles.</p></a></section>
 <section class="band"><h2>The Daily Dozen</h2><p>Twelve moves, learned once and polished all month.</p><div class="dozen mini">{''.join(f'<a href="/women/dozen/#{s}">{icon(s)}<span>{E(n)}</span></a>' for n,_,s in DOZEN)}</div></section>
 <section class="two"><div><h2>Why train it?</h2><p>The pelvic floor is a hammock of muscles from your pubic bone to your tailbone. It holds you up, keeps you dry and joins in every orgasm. A few studies link training it with better arousal and stronger orgasms, and the research is young, so think of this as a well-loved experiment.</p></div>
@@ -179,14 +179,7 @@ ld=f'''<p class="kick">For practitioners</p><h1>Lead the Journey</h1><p class="s
 <form class="wait" onsubmit="return false"><label>Join the waiting list<input type="email" placeholder="you@example.com" disabled></label><button class="btn" disabled>Opening soon</button></form></div></article>'''
 page('/women/leaders/','Leaders and Classes | PelvisPower','How to lead PelvisPower in pairs, circles and small classes, plus the coming leader certification.',ld,active='/women/leaders/')
 # ---------- Men
-mn='''<img class="coversm" src="/assets/pics/the-full-lift.svg" alt="" style="max-width:120px;background:#fff;border-radius:12px;padding:8px"><p class="kick">In preparation</p><h1>PelvisPower for Men</h1><p class="sub">The same month, for the muscles men have too</p><article>
-<p>Men have a pelvic floor, and it does a great deal. It supports sexual function, helps with control and stamina, and takes part in orgasm. It can be trained, and the training is friendly and discreet.</p>
-<p>The month follows the same plan as the women's course. Thirty days, five Levels, twelve moves and a graduation. The moves differ in small ways and the spirit is the same.</p>
-<h2>What to expect</h2><p>Three to ten minutes a day, in thin comfortable clothes. Light, funny and never clinical, with a Pleasure Dial from 1 to 5 and a reward that you set yourself.</p>
-<h2>Train with her</h2><p>Many couples train in parallel, one in each book, and compare numbers over breakfast. See <a href="/two/">Together</a>.</p>
-<h2>The longer game</h2><p>A companion book, <i>Well-Suited for Pleasure: The Long Game for Hands-Free Male Orgasm</i>, is also on the way, with a tree for every Day.</p>
-<p class="c"><a class="btn alt" href="/women/">Meanwhile, see the women's course</a></p></article>'''
-page('/men/','PelvisPower for Men | In Preparation','The 30-day pelvic floor course for men, in preparation.',mn,active='/men/')
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'build_men.py')).read())
 # ---------- Together
 tg='''<p class="kick">Better together</p><h1>Train Together</h1><p class="sub">Same Day, same mats, big smiles</p><article>
 <h2>Side by side</h2><p>You and a partner train the same Day, one in PelvisPower for Women and one in PelvisPower for Men. Count each other's reps, cheer, and compare numbers over coffee.</p>

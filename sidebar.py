@@ -13,14 +13,14 @@ PRE = {'en': ''}
 PRE.update({l: '/' + l for l in LANGS if l != 'en'})
 
 S = {
- 'en': dict(side_h='The 30 days', comp_k='Companion course', pp_b='A 30-day pelvic floor plan that goes with this book. Same month, same pace.', pp_cta='Open PelvisPower', pair_k="Today's pairing", prog='Day {n} of 30', dfc_k='Companion book', dfc_b='Thirty days of stories and notes to read alongside your training. Week one is free.', dfc_cta='Read Dress for Caress', pairr_k="Today's reading", your='Your 30 days', soon='In preparation', men_h='The 30 days, preview', men_b='The same month, for the muscles men have too.', her_k='For the woman in your life', her_b='She can start today with PelvisPower for Women and its companion book.', her_cta='PelvisPower for Women', both_h='Choose your path', w='Women', m='Men', t='Together', members='members'),
- 'fr': dict(side_h='Les 30 jours', comp_k='Cours compagnon', pp_b="Un plan de 30 jours pour le plancher pelvien, qui accompagne ce livre. Même mois, même rythme.", pp_cta='Ouvrir PelvisPower', pair_k="L'association du jour", prog='Jour {n} sur 30', dfc_k='Livre compagnon', dfc_b="Trente jours d'histoires et de notes à lire en parallèle de votre entraînement. La première semaine est gratuite.", dfc_cta='Lire Dress for Caress', pairr_k='La lecture du jour', your='Vos 30 jours', soon='En préparation', men_h='Les 30 jours, aperçu', men_b='Le même mois, pour les muscles que les hommes ont aussi.', her_k='Pour la femme de votre vie', her_b="Elle peut commencer aujourd'hui avec PelvisPower pour les femmes et son livre compagnon.", her_cta='PelvisPower pour les femmes', both_h='Choisissez votre voie', w='Femmes', m='Hommes', t='À deux', members='membres'),
- 'es': dict(side_h='Los 30 días', comp_k='Curso compañero', pp_b='Un plan de 30 días para el suelo pélvico que acompaña a este libro. El mismo mes, el mismo ritmo.', pp_cta='Abrir PelvisPower', pair_k='La pareja de hoy', prog='Día {n} de 30', dfc_k='Libro compañero', dfc_b='Treinta días de relatos y notas para leer junto a tu entrenamiento. La primera semana es gratis.', dfc_cta='Leer Dress for Caress', pairr_k='La lectura de hoy', your='Tus 30 días', soon='En preparación', men_h='Los 30 días, avance', men_b='El mismo mes, para los músculos que los hombres también tienen.', her_k='Para la mujer de tu vida', her_b='Ella puede empezar hoy con PelvisPower para mujeres y su libro compañero.', her_cta='PelvisPower para mujeres', both_h='Elige tu camino', w='Mujeres', m='Hombres', t='En pareja', members='miembros'),
- 'de': dict(side_h='Die 30 Tage', comp_k='Begleitkurs', pp_b='Ein 30-Tage-Plan für den Beckenboden, der zu diesem Buch gehört. Derselbe Monat, dasselbe Tempo.', pp_cta='PelvisPower öffnen', pair_k='Das heutige Paar', prog='Tag {n} von 30', dfc_k='Begleitbuch', dfc_b='Dreißig Tage voller Geschichten und Notizen, die du neben deinem Training liest. Die erste Woche ist kostenlos.', dfc_cta='Dress for Caress lesen', pairr_k='Die heutige Lektüre', your='Deine 30 Tage', soon='In Vorbereitung', men_h='Die 30 Tage, Vorschau', men_b='Derselbe Monat, für die Muskeln, die auch Männer haben.', her_k='Für die Frau in deinem Leben', her_b='Sie kann heute mit PelvisPower für Frauen und dem Begleitbuch beginnen.', her_cta='PelvisPower für Frauen', both_h='Wähle deinen Weg', w='Frauen', m='Männer', t='Zu zweit', members='Mitglieder'),
- 'pt': dict(side_h='Os 30 dias', comp_k='Curso companheiro', pp_b='Um plano de 30 dias para o assoalho pélvico que acompanha este livro. O mesmo mês, o mesmo ritmo.', pp_cta='Abrir PelvisPower', pair_k='O par de hoje', prog='Dia {n} de 30', dfc_k='Livro companheiro', dfc_b='Trinta dias de histórias e notas para ler junto com o seu treino. A primeira semana é grátis.', dfc_cta='Ler Dress for Caress', pairr_k='A leitura de hoje', your='Seus 30 dias', soon='Em preparação', men_h='Os 30 dias, prévia', men_b='O mesmo mês, para os músculos que os homens também têm.', her_k='Para a mulher da sua vida', her_b='Ela pode começar hoje com PelvisPower para mulheres e o livro companheiro.', her_cta='PelvisPower para mulheres', both_h='Escolha o seu caminho', w='Mulheres', m='Homens', t='A dois', members='membros'),
- 'ru': dict(side_h='30 дней', comp_k='Курс-компаньон', pp_b='30-дневный план для тазового дна, который идёт вместе с этой книгой. Тот же месяц, тот же темп.', pp_cta='Открыть PelvisPower', pair_k='Пара на сегодня', prog='День {n} из 30', dfc_k='Книга-компаньон', dfc_b='Тридцать дней историй и заметок, которые читаются рядом с вашими тренировками. Первая неделя бесплатна.', dfc_cta='Читать Dress for Caress', pairr_k='Чтение на сегодня', your='Ваши 30 дней', soon='В подготовке', men_h='30 дней, предпросмотр', men_b='Тот же месяц, для мышц, которые есть и у мужчин.', her_k='Для женщины в вашей жизни', her_b='Она может начать сегодня с PelvisPower для женщин и книгой-компаньоном.', her_cta='PelvisPower для женщин', both_h='Выберите свой путь', w='Женщины', m='Мужчины', t='Вдвоём', members='для участников'),
- 'he': dict(side_h='30 הימים', comp_k='קורס מלווה', pp_b='תוכנית של 30 יום לרצפת האגן שהולכת יד ביד עם הספר הזה. אותו חודש, אותו קצב.', pp_cta='לפתוח את PelvisPower', pair_k='הזיווג של היום', prog='יום {n} מתוך 30', dfc_k='ספר מלווה', dfc_b='שלושים ימים של סיפורים והערות לקריאה לצד האימון שלך. השבוע הראשון חינם.', dfc_cta='לקרוא את Dress for Caress', pairr_k='הקריאה של היום', your='30 הימים שלך', soon='בהכנה', men_h='30 הימים, תצוגה מקדימה', men_b='אותו חודש, לשרירים שיש גם לגברים.', her_k='לאישה שבחייך', her_b='היא יכולה להתחיל היום עם PelvisPower לנשים והספר המלווה שלו.', her_cta='PelvisPower לנשים', both_h='בחרו את הדרך שלכם', w='נשים', m='גברים', t='ביחד', members='לחברות'),
- 'th': dict(side_h='30 วัน', comp_k='คอร์สคู่ใจ', pp_b='แผน 30 วันสำหรับกล้ามเนื้อเชิงกรานที่ไปด้วยกันกับหนังสือเล่มนี้ เดือนเดียวกัน จังหวะเดียวกัน', pp_cta='เปิด PelvisPower', pair_k='คู่ของวันนี้', prog='วันที่ {n} จาก 30', dfc_k='หนังสือคู่ใจ', dfc_b='เรื่องเล่าและบันทึกสามสิบวันให้อ่านควบคู่กับการฝึก สัปดาห์แรกอ่านฟรี', dfc_cta='อ่าน Dress for Caress', pairr_k='บทอ่านของวันนี้', your='30 วันของคุณ', soon='กำลังเตรียม', men_h='30 วัน ตัวอย่าง', men_b='เดือนเดียวกัน สำหรับกล้ามเนื้อที่ผู้ชายก็มี', her_k='สำหรับผู้หญิงในชีวิตคุณ', her_b='เธอเริ่มได้วันนี้ด้วย PelvisPower สำหรับผู้หญิงและหนังสือคู่ใจ', her_cta='PelvisPower สำหรับผู้หญิง', both_h='เลือกเส้นทางของคุณ', w='ผู้หญิง', m='ผู้ชาย', t='ด้วยกัน', members='สมาชิก'),
+ 'en': dict(side_h='The 30 days', comp_k='Companion course', pp_b='A 30-day pelvic floor plan that goes with this book. Same month, same pace.', pp_cta='Open PelvisPower', pair_k="Today's pairing", prog='Day {n} of 30', dfc_k='Companion book', dfc_b='Thirty days of stories and notes to read alongside your training. Week one is free.', dfc_cta='Read Dress for Caress', pairr_k="Today's reading", your='Your 30 days', soon='In preparation', men_h='The 30 days', men_b='The same month, for the muscles men have too.', her_k='For the woman in your life', her_b='She can start today with PelvisPower for Women and its companion book.', her_cta='PelvisPower for Women', both_h='Choose your path', w='Women', m='Men', t='Together', members='members'),
+ 'fr': dict(side_h='Les 30 jours', comp_k='Cours compagnon', pp_b="Un plan de 30 jours pour le plancher pelvien, qui accompagne ce livre. Même mois, même rythme.", pp_cta='Ouvrir PelvisPower', pair_k="L'association du jour", prog='Jour {n} sur 30', dfc_k='Livre compagnon', dfc_b="Trente jours d'histoires et de notes à lire en parallèle de votre entraînement. La première semaine est gratuite.", dfc_cta='Lire Dress for Caress', pairr_k='La lecture du jour', your='Vos 30 jours', soon='En préparation', men_h='Les 30 jours', men_b='Le même mois, pour les muscles que les hommes ont aussi.', her_k='Pour la femme de votre vie', her_b="Elle peut commencer aujourd'hui avec PelvisPower pour les femmes et son livre compagnon.", her_cta='PelvisPower pour les femmes', both_h='Choisissez votre voie', w='Femmes', m='Hommes', t='À deux', members='membres'),
+ 'es': dict(side_h='Los 30 días', comp_k='Curso compañero', pp_b='Un plan de 30 días para el suelo pélvico que acompaña a este libro. El mismo mes, el mismo ritmo.', pp_cta='Abrir PelvisPower', pair_k='La pareja de hoy', prog='Día {n} de 30', dfc_k='Libro compañero', dfc_b='Treinta días de relatos y notas para leer junto a tu entrenamiento. La primera semana es gratis.', dfc_cta='Leer Dress for Caress', pairr_k='La lectura de hoy', your='Tus 30 días', soon='En preparación', men_h='Los 30 días', men_b='El mismo mes, para los músculos que los hombres también tienen.', her_k='Para la mujer de tu vida', her_b='Ella puede empezar hoy con PelvisPower para mujeres y su libro compañero.', her_cta='PelvisPower para mujeres', both_h='Elige tu camino', w='Mujeres', m='Hombres', t='En pareja', members='miembros'),
+ 'de': dict(side_h='Die 30 Tage', comp_k='Begleitkurs', pp_b='Ein 30-Tage-Plan für den Beckenboden, der zu diesem Buch gehört. Derselbe Monat, dasselbe Tempo.', pp_cta='PelvisPower öffnen', pair_k='Das heutige Paar', prog='Tag {n} von 30', dfc_k='Begleitbuch', dfc_b='Dreißig Tage voller Geschichten und Notizen, die du neben deinem Training liest. Die erste Woche ist kostenlos.', dfc_cta='Dress for Caress lesen', pairr_k='Die heutige Lektüre', your='Deine 30 Tage', soon='In Vorbereitung', men_h='Die 30 Tage', men_b='Derselbe Monat, für die Muskeln, die auch Männer haben.', her_k='Für die Frau in deinem Leben', her_b='Sie kann heute mit PelvisPower für Frauen und dem Begleitbuch beginnen.', her_cta='PelvisPower für Frauen', both_h='Wähle deinen Weg', w='Frauen', m='Männer', t='Zu zweit', members='Mitglieder'),
+ 'pt': dict(side_h='Os 30 dias', comp_k='Curso companheiro', pp_b='Um plano de 30 dias para o assoalho pélvico que acompanha este livro. O mesmo mês, o mesmo ritmo.', pp_cta='Abrir PelvisPower', pair_k='O par de hoje', prog='Dia {n} de 30', dfc_k='Livro companheiro', dfc_b='Trinta dias de histórias e notas para ler junto com o seu treino. A primeira semana é grátis.', dfc_cta='Ler Dress for Caress', pairr_k='A leitura de hoje', your='Seus 30 dias', soon='Em preparação', men_h='Os 30 dias', men_b='O mesmo mês, para os músculos que os homens também têm.', her_k='Para a mulher da sua vida', her_b='Ela pode começar hoje com PelvisPower para mulheres e o livro companheiro.', her_cta='PelvisPower para mulheres', both_h='Escolha o seu caminho', w='Mulheres', m='Homens', t='A dois', members='membros'),
+ 'ru': dict(side_h='30 дней', comp_k='Курс-компаньон', pp_b='30-дневный план для тазового дна, который идёт вместе с этой книгой. Тот же месяц, тот же темп.', pp_cta='Открыть PelvisPower', pair_k='Пара на сегодня', prog='День {n} из 30', dfc_k='Книга-компаньон', dfc_b='Тридцать дней историй и заметок, которые читаются рядом с вашими тренировками. Первая неделя бесплатна.', dfc_cta='Читать Dress for Caress', pairr_k='Чтение на сегодня', your='Ваши 30 дней', soon='В подготовке', men_h='30 дней', men_b='Тот же месяц, для мышц, которые есть и у мужчин.', her_k='Для женщины в вашей жизни', her_b='Она может начать сегодня с PelvisPower для женщин и книгой-компаньоном.', her_cta='PelvisPower для женщин', both_h='Выберите свой путь', w='Женщины', m='Мужчины', t='Вдвоём', members='для участников'),
+ 'he': dict(side_h='30 הימים', comp_k='קורס מלווה', pp_b='תוכנית של 30 יום לרצפת האגן שהולכת יד ביד עם הספר הזה. אותו חודש, אותו קצב.', pp_cta='לפתוח את PelvisPower', pair_k='הזיווג של היום', prog='יום {n} מתוך 30', dfc_k='ספר מלווה', dfc_b='שלושים ימים של סיפורים והערות לקריאה לצד האימון שלך. השבוע הראשון חינם.', dfc_cta='לקרוא את Dress for Caress', pairr_k='הקריאה של היום', your='30 הימים שלך', soon='בהכנה', men_h='30 הימים', men_b='אותו חודש, לשרירים שיש גם לגברים.', her_k='לאישה שבחייך', her_b='היא יכולה להתחיל היום עם PelvisPower לנשים והספר המלווה שלו.', her_cta='PelvisPower לנשים', both_h='בחרו את הדרך שלכם', w='נשים', m='גברים', t='ביחד', members='לחברות'),
+ 'th': dict(side_h='30 วัน', comp_k='คอร์สคู่ใจ', pp_b='แผน 30 วันสำหรับกล้ามเนื้อเชิงกรานที่ไปด้วยกันกับหนังสือเล่มนี้ เดือนเดียวกัน จังหวะเดียวกัน', pp_cta='เปิด PelvisPower', pair_k='คู่ของวันนี้', prog='วันที่ {n} จาก 30', dfc_k='หนังสือคู่ใจ', dfc_b='เรื่องเล่าและบันทึกสามสิบวันให้อ่านควบคู่กับการฝึก สัปดาห์แรกอ่านฟรี', dfc_cta='อ่าน Dress for Caress', pairr_k='บทอ่านของวันนี้', your='30 วันของคุณ', soon='กำลังเตรียม', men_h='30 วัน', men_b='เดือนเดียวกัน สำหรับกล้ามเนื้อที่ผู้ชายก็มี', her_k='สำหรับผู้หญิงในชีวิตคุณ', her_b='เธอเริ่มได้วันนี้ด้วย PelvisPower สำหรับผู้หญิงและหนังสือคู่ใจ', her_cta='PelvisPower สำหรับผู้หญิง', both_h='เลือกเส้นทางของคุณ', w='ผู้หญิง', m='ผู้ชาย', t='ด้วยกัน', members='สมาชิก'),
 }
 
 OPEN = '<!--sb--><div class="shell"><div class="col"><!--/sb-->'
@@ -66,7 +66,7 @@ def scrape_pp():
 
 
 def men_titles():
-    f = '/home/claude/men/PelvisPower-for-Men_Draft_30-Days.txt'
+    f = '/nonexistent'
     cache = f'{PP}/men_titles.json'
     d = {}
     if os.path.exists(f):
@@ -91,6 +91,19 @@ def scrape_levels():
 
 
 LV = scrape_levels()
+MENLV = json.load(open(f'{PP}/men_levels.json')) if os.path.exists(f'{PP}/men_levels.json') else []
+CTRL = {'fr': 'Contrôle', 'es': 'Control', 'de': 'Kontrolle', 'pt': 'Controle', 'ru': 'Контроль', 'he': 'שליטה', 'th': 'การควบคุม'}
+
+
+def men_level_heads(l):
+    base = list(LV.get(l) or LV['en'])
+    if l == 'en':
+        return [f'Level {i + 1}: {n}' for i, n in enumerate(MENLV)] if MENLV else base
+    if len(base) > 3 and l in CTRL and ':' in base[3]:
+        base[3] = base[3].split(':')[0] + ': ' + CTRL[l]
+    return base
+
+
 DF = scrape_dfc()
 PW = scrape_pp()
 MEN = men_titles()
@@ -158,13 +171,14 @@ def pp_list(l, cur, t, heading):
     return f'<div class="sw days"><h2>{e(heading)}</h2>{li}</ol></div>'
 
 
-def men_list(l, t):
-    lv = LV.get(l) or LV['en']
+def men_list(l, t, cur=0):
+    lv = men_level_heads(l)
     li = ''
     for n in range(1, 31):
         if (n - 1) % 6 == 0 and len(lv) >= (n - 1) // 6 + 1:
             li += ('</ol>' if n > 1 else '') + f'<h3 class="lv">{lv[(n - 1) // 6]}</h3><ol>'
-        li += f'<li><span class="nolink"><b>{n}</b><span lang="en">{e(MEN.get(n, ""))}</span></span></li>'
+        cls = ' class="cur" aria-current="page"' if n == cur else ''
+        li += f'<li{cls}><a href="/men/day-{n:02d}/"><b>{n}</b><span lang="en">{e(MEN.get(n, ""))}</span></a></li>'
     return f'<div class="sw days"><h2>{e(t["men_h"])}</h2>{li}</ol></div>'
 
 
@@ -194,9 +208,10 @@ def side_pp(l, kind, cur):
             top = card('dfc', t['dfc_k'], 'Dress for Caress', t['dfc_b'], t['dfc_cta'], dfc_pre + '/')
         return top + pp_list(l, cur, t, t['your'])
     if kind == 'men':
-        top = (f'<div class="sw card men"><p class="sk">{e(t["soon"])}</p><p class="st">PelvisPower, {e(t["m"])}</p><p class="sb">{e(t["men_b"])}</p></div>')
+        top = (f'<div class="sw card men"><p class="sk">PelvisPower</p><p class="st">{e(t["m"])}</p><p class="sb">{e(t["men_b"])}</p></div>')
+        book = (f'<div class="sw card book"><p class="sk">{e(t["soon"])}</p><p class="st" lang="en">Well-Suited to Pleasure</p><p class="sb" lang="en">The Long Game for Male Sexual Performance</p></div>')
         her = card('her', t['her_k'], t['her_cta'], t['her_b'], t['her_cta'], f'https://pelvispower.org{PRE[l] if l in PW else ""}/women/')
-        return top + men_list(l, t) + her
+        return top + men_list(l, t, cur) + book + her
     wl = f'{PRE[l]}/women/'
     ml = f'{PRE[l]}/men/'
     tl = f'{PRE[l]}/two/'
@@ -239,7 +254,7 @@ def pp_page(rel, s):
     r = '/' + rel.strip('/')
     if l != 'en':
         r = r[len(PRE[l]):]
-    m = re.match(r'/women/day-(\d\d)/', r + '/')
+    m = re.match(r'/(?:women|men)/day-(\d\d)/', r + '/')
     cur = int(m.group(1)) if m else 0
     if r.startswith('/women'):
         kind = 'women'
@@ -296,7 +311,7 @@ CSS = r'''
 .shell{display:grid;grid-template-columns:minmax(0,__W__px) 300px;gap:32px;justify-content:center;max-width:1200px;margin:0 auto;padding:0 16px}
 .shell .col{min-width:0}
 .shell main,.shell main.wide{max-width:none;margin:0;padding-left:0;padding-right:0}
-.shell .dgrid{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
+.shell .dgrid{grid-template-columns:repeat(3,1fr)}@media(max-width:520px){.shell .dgrid{grid-template-columns:repeat(2,1fr)}}
 :root{--side:#fbf3f5}@media(prefers-color-scheme:dark){:root{--side:#261a20}}
 .side{align-self:start;margin-top:24px;padding:18px 16px 24px;background:var(--side);border-radius:16px;font:14px/1.4 system-ui,sans-serif}
 .side .sh{margin:0 0 12px;font:600 17px/1.25 Georgia,serif;color:var(--plum)}
