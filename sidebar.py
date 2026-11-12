@@ -160,7 +160,7 @@ def side_dfc(l, cur):
         head = card('pp', t['comp_k'], 'PelvisPower', t['pp_b'], t['pp_cta'], pp_href(l, cur) if cur else 'https://pelvispower.org/', extra)
     else:
         head = card('pp', t['comp_k'], 'PelvisPower', t['pp_b'], t['pp_cta'], 'https://pelvispower.org' + (PRE[l] + '/women/' if l in PW else '/women/'))
-    return head + dfc_list(l, cur, t)
+    return '<p class="sh" lang="en">Dress for Caress: 30 Days to Peak Pleasure</p>' + head + dfc_list(l, cur, t)
 
 
 def side_pp(l, kind, cur):
@@ -279,7 +279,8 @@ CSS = r'''
 .shell .col{min-width:0}
 .shell main,.shell main.wide{max-width:none;margin:0;padding-left:0;padding-right:0}
 .shell .dgrid{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
-.side{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow-y:auto;padding:24px 0 48px;font:14px/1.4 system-ui,sans-serif;scrollbar-width:thin}
+.side{align-self:start;padding:24px 0 48px;font:14px/1.4 system-ui,sans-serif}
+.side .sh{margin:0 0 12px;font:600 17px/1.25 Georgia,serif;color:var(--plum)}
 .sw{border:1px solid var(--rose);border-radius:14px;background:var(--bg);padding:14px 16px;margin-bottom:16px}
 .sw.card{background:var(--rose);border-color:transparent}
 .sw.card.dfc{background:var(--sand)}
@@ -307,7 +308,7 @@ CSS = r'''
 .sw .nolink{color:var(--mute)!important}
 .sw .paths{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
 .sw .paths a{display:inline-block;padding:7px 13px;border-radius:999px;border:1px solid var(--plum);color:var(--plum);text-decoration:none;font-weight:600}
-@media(max-width:940px){.shell{display:block}.side{position:static;max-height:none;overflow:visible;padding-top:0}.sw.days ol{max-height:18em;overflow-y:auto}}
+@media(max-width:940px){.shell{display:block}.side{padding-top:0}}
 @media print{.side{display:none}.shell{display:block}}
 '''
 
