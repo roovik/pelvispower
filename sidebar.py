@@ -132,7 +132,8 @@ def e(x):
 
 # ---------------------------------------------------------------- blocks
 def card(kind, k, title, body, cta, href, extra=''):
-    return (f'<div class="sw card {kind}"><p class="sk">{e(k)}</p><p class="st">{e(title)}</p>{extra}'
+    cov = f'<a class="scov" href="{href}" rel="noopener"><img src="/assets/dfc-cover.jpg" width="210" height="315" alt="Dress for Caress, book cover" loading="lazy"></a>' if kind == 'dfc' else ''
+    return (f'<div class="sw card {kind}">{cov}<p class="sk">{e(k)}</p><p class="st">{e(title)}</p>{extra}'
             f'<p class="sb">{e(body)}</p><a class="sbtn" href="{href}" rel="noopener">{e(cta)}</a></div>')
 
 
@@ -192,7 +193,8 @@ def side_dfc(l, cur):
         head = card('pp', t['comp_k'], 'PelvisPower', t['pp_b'], t['pp_cta'], pp_href(l, cur) if cur else 'https://pelvispower.org/', extra)
     else:
         head = card('pp', t['comp_k'], 'PelvisPower', t['pp_b'], t['pp_cta'], 'https://pelvispower.org' + (PRE[l] + '/women/' if l in PW else '/women/'))
-    return '<p class="sh" lang="en">Dress for Caress: 30 Days to Peak Pleasure</p>' + head + dfc_list(l, cur, t)
+    cover = f'<a class="scov" href="{PRE[l] if l in DF else ""}/"><img src="/assets/cover-sm.jpg" width="210" height="315" alt="Dress for Caress, book cover"></a>'
+    return cover + '<p class="sh" lang="en">Dress for Caress: 30 Days to Peak Pleasure</p>' + head + dfc_list(l, cur, t)
 
 
 def side_pp(l, kind, cur):
@@ -325,6 +327,7 @@ CSS = r'''
 @media(max-width:700px){.shell main.wide:has(>.lvl){grid-template-columns:repeat(2,minmax(0,1fr))}.shell main.wide:has(>.lvl) .lvl .sub{min-height:0}}
 :root{--side:#fbf3f5}@media(prefers-color-scheme:dark){:root{--side:#261a20}}
 .side{align-self:start;margin-top:24px;padding:18px 16px 24px;background:var(--side);border-radius:16px;font:14px/1.4 system-ui,sans-serif}
+.side .scov{display:block;margin:0 0 14px}.side .scov img{display:block;width:100%;max-width:210px;height:auto;margin:0 auto;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
 .side .sh{margin:0 0 12px;font:600 17px/1.25 Georgia,serif;color:var(--plum)}
 .sw{border:0;border-radius:0;background:transparent;padding:6px 0;margin-bottom:18px}
 .sw .sk{margin:0 0 4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
