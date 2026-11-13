@@ -379,6 +379,16 @@ form.reg .btn{margin-top:8px;width:100%}
 /*fig cutout*/
 .hero.art{box-shadow:none;border-radius:0;background:transparent;filter:drop-shadow(0 12px 18px rgba(60,10,30,.28))}
 
+/*toc*/
+.toc li{position:relative;padding:10px 1.6em 10px .5em;transition:background .15s}
+.toc a,.toc a:hover{text-decoration:none}.toc a::before{content:"";position:absolute;inset:0}
+.toc li::after{content:"\203A";position:absolute;right:.5em;top:50%;transform:translateY(-52%);font:300 1.6rem/1 system-ui,sans-serif;color:var(--gold);opacity:.45;transition:transform .15s,opacity .15s}
+.toc li:hover,.toc li:focus-within{background:var(--rose)}.toc li:hover::after,.toc li:focus-within::after{opacity:1;transform:translate(3px,-52%)}
+.toc li.locked::after{opacity:.2}.toc em{margin-right:.2em}
+[dir=rtl] .toc li{padding:10px .5em 10px 1.6em}[dir=rtl] .toc li::after{right:auto;left:.5em;content:"\2039"}[dir=rtl] .toc li:hover::after{transform:translate(-3px,-52%)}
+@media(hover:none){.toc li:hover{background:none}.toc li:hover::after{transform:translateY(-52%);opacity:.45}}
+.toc em{float:none;position:absolute;right:2.2em;top:50%;transform:translateY(-50%);font:12px system-ui,sans-serif;color:var(--mute)}[dir=rtl] .toc em{right:auto;left:2.2em}
+.sub a{color:var(--plum);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
 /*ctactr*/
 .intro .cta{text-align:center;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.intro .cta .btn{margin:0}
 /*langfix*/
