@@ -135,6 +135,8 @@ form.reg .btn{margin-top:8px;width:100%}
 /*fig cutout*/
 .hero.art{box-shadow:none;border-radius:0;background:transparent;filter:drop-shadow(0 12px 18px rgba(60,10,30,.28))}
 
+/*ctactr*/
+.intro .cta{text-align:center;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.intro .cta .btn{margin:0}
 /*langfix*/
 .lang summary,.lang li a{color:#2a1a20}.lang ul,.lang summary{background:#fff}.lang li a:hover,.lang li a.on{background:#f8eaee;color:#2a1a20}
 /*gutters*/
