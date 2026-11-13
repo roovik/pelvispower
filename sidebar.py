@@ -196,7 +196,7 @@ def side_dfc(l, cur):
     cover = f'<a class="scov" href="{PRE[l] if l in DF else ""}/"><img src="/assets/cover-sm.jpg" width="210" height="315" alt="Dress for Caress, book cover"></a>'
     ppc = (f'<a class="scov" href="{pp_href(l, cur) if cur else "https://pelvispower.org" + (PRE[l] + "/women/" if l in PW else "/women/")}" rel="noopener"><img src="/assets/pp-cover-sm.jpg" width="210" height="315" alt="PelvisPower for Women, book cover"></a>')
     head = head.replace('<p class="st">PelvisPower</p>', '<p class="st">' + e(t['her_cta']) + '</p>').replace('<div class="sw card pp">', '<div class="sw card pp">' + ppc, 1)
-    return head + cover + '<p class="sh" lang="en"><span class="shb">Dress for Caress</span><span class="shs">30 Days to Peak Pleasure</span></p>' + dfc_list(l, cur, t)
+    return head + '<p class="sh" lang="en"><span class="shb">Dress for Caress</span><span class="shs">30 Days to Peak Pleasure</span></p>' + dfc_list(l, cur, t)
 
 
 def side_pp(l, kind, cur):
