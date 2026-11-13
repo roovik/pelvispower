@@ -1,3 +1,2 @@
-(function(){try{if(localStorage.getItem('pp18')==='1')return}catch(e){}
-var g=document.getElementById('agegate');if(!g)return;g.hidden=false;
-document.getElementById('yes').onclick=function(){try{localStorage.setItem('pp18','1')}catch(e){}g.hidden=true}})();
+document.addEventListener("click",function(e){var d=document.querySelector("details.lang");if(d&&d.open&&!d.contains(e.target))d.open=false});document.addEventListener("keydown",function(e){var d=document.querySelector("details.lang");if(e.key==="Escape"&&d)d.open=false});
+(function(){var f=document.querySelector("form.reg");if(!f)return;try{var q=new URLSearchParams(location.search);var n=q.get("next");if(n&&/^\/[^\/\\]/.test(n))f.next.value=n;if(q.get("e")){var e=f.querySelector(".regerr");if(e)e.hidden=false}}catch(x){}})();

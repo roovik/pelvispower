@@ -46,7 +46,6 @@ def page(path,title,desc,body,active='',main_class=''):
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:image" content="https://pelvispower.org/assets/cover.jpg"><meta name="theme-color" content="#4a1a35">
 <link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{'' if path=='/404.html' else i18n.alternates(full)}</head><body>
 <header class="top"><a class="brand" href="{PRE}/">PelvisPower</a><nav>{nav(active)}</nav>{'' if path=='/404.html' else i18n.switcher(full,CODE)}</header>
-<div id="agegate" hidden><div><h2>{T['gate_h']}</h2><p>{T['gate_p']}</p><button id="yes">{T['gate_yes']}</button> <a href="https://www.google.com">{T['gate_leave']}</a></div></div>
 <main class="{main_class}">{body}</main>
 <footer><p>{T['foot1']}</p><p>{T['foot2']}</p></footer>
 <script src="/assets/site.js"></script></body></html>'''

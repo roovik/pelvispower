@@ -1,8 +1,22 @@
 name = "pelvispower"
+main = "worker.js"
+keep_vars = true
 compatibility_date = "2026-10-01"
 
-# Pure static site. Attach pelvispower.org (and pelvispower.com) to this Worker in the Cloudflare dashboard.
+# Static site plus a small worker for the free registration. Attach pelvispower.org (and pelvispower.com) to this Worker in the Cloudflare dashboard.
 [assets]
 directory = "./public"
+binding = "ASSETS"
 not_found_handling = "404-page"
 html_handling = "auto-trailing-slash"
+run_worker_first = ["/*"]
+
+# MEMBERS KV is created automatically on first deploy
+[[kv_namespaces]]
+binding = "MEMBERS"
+
+[vars]
+# Free giveaway: every registered visitor can read the course pages until this moment (UTC). After it, the course pages show the /closed/ notice.
+FREE_UNTIL = "2027-01-01T00:00:00Z"
+FREE_UNTIL_TEXT = "1 January"
+# Secrets to add in the Cloudflare dashboard (type Secret): SESSION_SECRET and RESEND_API_KEY

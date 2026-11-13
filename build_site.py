@@ -70,7 +70,6 @@ def page(path,title,desc,body,active='',extra_head='',main_class=''):
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:image" content="https://pelvispower.org/assets/cover.jpg"><meta name="theme-color" content="#4a1a35">
 <link rel="icon" href="/assets/pics/the-full-lift.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">{'' if (path=='/404.html' or path.startswith('/men/') and path!='/men/') else i18n.alternates(path)}{extra_head}</head><body>
 <header class="top"><a class="brand" href="/">PelvisPower</a><nav>{nav(active)}</nav>{'' if path=='/404.html' else i18n.switcher('/men/' if path.startswith('/men/') else path,'en')}</header>
-<div id="agegate" hidden><div><h2>Adults only</h2><p>This site is for readers 18 and over and talks about sexual pleasure and sexual health.</p><button id="yes">I am 18 or older</button> <a href="https://www.google.com">Leave</a></div></div>
 <main class="{main_class}">{body}</main>
 <footer><p>PelvisPower, by R. J. Koret. Part of <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Companion to <a href="https://dressforcaress.com/">Dress for Caress</a>.</p>
 <p>This is a friendly fitness and pleasure guide and is no substitute for medical care. Pain, unexplained bleeding or pelvic pressure deserve a visit with a pelvic floor physical therapist or a doctor.</p></footer>
