@@ -378,6 +378,16 @@ form.reg .btn{margin-top:8px;width:100%}
 .plans .ck input{margin-top:2px}
 /*fig cutout*/
 .hero.art{box-shadow:none;border-radius:0;background:transparent;filter:drop-shadow(0 12px 18px rgba(60,10,30,.28))}
+
+/*gutters*/
+:root{--gut:#efdfe5;--gut2:#e6d0d9;--edge:#d9b97a}@media(prefers-color-scheme:dark){:root{--gut:#150d11;--gut2:#1d1218;--edge:#6b5330}}
+html{background:var(--gut)}
+body{min-height:100vh;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+@media(min-width:760px) and (max-width:1099px){body{margin:0 clamp(12px,2.4vw,22px);border-left:1px solid var(--edge);border-right:1px solid var(--edge);box-shadow:0 0 30px rgba(109,31,58,.18)}}
+@media(min-width:1100px){
+html{background:linear-gradient(90deg,var(--gut2),var(--gut) 30%,var(--gut) 70%,var(--gut2))}
+body{max-width:1280px;margin:0 auto;position:relative;border-left:2px solid var(--edge);border-right:2px solid var(--edge);box-shadow:0 0 0 6px var(--gut),0 0 0 7px var(--edge),0 0 60px rgba(109,31,58,.28)}
+}
 @media print{.side{display:none}.shell{display:block}}
 '''
 
