@@ -5,3 +5,4 @@ for c in fr es de pt ru he; do [ -f langcfg/$c.py ] && [ -f /home/claude/lang/Pe
 python3 build_site.py
 python3 signup.py
 python3 sidebar.py
+python3 ru_polish.py
