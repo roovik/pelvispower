@@ -82,7 +82,7 @@ def icon(slug,cls='ic'): return f'<img class="{cls}" src="/assets/pics/{slug}.sv
 def P(ps): return ''.join(f'<p>{E(p)}</p>' for p in ps)
 # ---------- Home
 home=f'''<section class="herow"><img class="cover" src="/assets/cover.jpg" alt="PelvisPower for Women: a superhero in a yoga outfit with a gold PP medal"><div>
-<p class="kick" style="text-transform:none;letter-spacing:.06em;font-size:15px">30-Day Sexercise Course for Health and Pleasure</p><h1>PelvisPower</h1><p class="sub">Train the muscles that peak your pleasure.</p>
+<p class="kick" style="text-transform:none;letter-spacing:.06em;font-size:15px">A 30-Day Course for Health and Pleasure</p><h1>PelvisPower</h1><p class="sub">Train the muscles that peak your pleasure.</p>
 <p>Thirty days. Twelve moves. One happy pelvic floor. A friendly personal trainer for the muscles behind arousal, sensation and orgasm, with bladder confidence and a happier lower back thrown in for good measure.</p>
 <p>Clothes stay on, nothing goes inside, and three to ten minutes a day is plenty.</p>
 <p><a class="btn" href="/women/start-here/">Start the month</a> <a class="btn alt" href="/women/">See all 30 days</a></p></div></section>
@@ -93,7 +93,7 @@ home=f'''<section class="herow"><img class="cover" src="/assets/cover.jpg" alt="
 <section class="two"><div><h2>Why train it?</h2><p>The pelvic floor is a hammock of muscles from your pubic bone to your tailbone. It holds you up, keeps you dry and joins in every orgasm. A few studies link training it with better arousal and stronger orgasms, and the research is young, so think of this as a well-loved experiment.</p></div>
 <div><h2>Reward included</h2><p>Pleasure is the reward for showing up, and you set its size. An orgasm is welcome and never required. Many readers pair the month with <a href="https://dressforcaress.com/">Dress for Caress</a>, a month of panties-on joy.</p></div></section>
 <section class="band alt"><h2>Share the journey</h2><p>Graduates can lead friends, circles and small classes. The leader course is on the way, and the practitioner pages are already open.</p><p><a class="btn alt" href="/women/leaders/">Leaders and classes</a></p></section>'''
-page('/','PelvisPower | 30-Day Sexercise Course for Health and Pleasure','Train the muscles that peak your pleasure. A friendly 30-day course for the pelvic floor, with twelve simple moves.',home,main_class='wide')
+page('/','PelvisPower | A 30-Day Course for Health and Pleasure','Train the muscles that peak your pleasure. A friendly 30-day course for the pelvic floor, with twelve simple moves.',home,main_class='wide')
 # ---------- Women landing
 def daycard(n):
     d=DAYS[n]; ic=DAYMOVE.get(n)
