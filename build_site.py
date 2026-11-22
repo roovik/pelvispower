@@ -101,7 +101,7 @@ def daycard(n):
     return f'<a class="dcard{" rc" if n in RECESS else ""}" href="/women/day-{n:02d}/"><b>Day {n}</b>{im}<span>{E(d["sub"] if n in RECESS and n!=30 else d["title"])}</span></a>'
 lv=''.join(f'<section class="lvl"><h2>Level {L["n"]}: {E(L["name"])}</h2><p class="sub">{E(L["desc"])}</p><div class="dgrid">{"".join(daycard(n) for n in L["days"])}</div></section>' for L in LEVELS)
 w=f'''<img class="coversm" src="/assets/cover.jpg" alt="PelvisPower for Women cover"><p class="kick">PelvisPower for Women</p><h1>The 30-Day Course</h1><p class="sub">Every Day is open to read. Take them in order or wander.</p>
-<p class="c"><a class="btn" href="/women/start-here/">Start here</a> <a class="btn alt" href="/women/dozen/">The Daily Dozen</a> <a class="btn alt" href="/women/chart/">Printable chart</a></p></main><main class="wide">{lv}'''
+<p class="c"><a class="btn" href="/women/start-here/">Start here</a> <a class="btn alt" href="/women/dozen/">The Daily Dozen</a> <a class="btn alt" href="/women/chart/">Printable chart</a> <a class="btn alt" href="/women/journal/">Journal and timer</a></p></main><main class="wide">{lv}'''
 page('/women/','PelvisPower for Women | 30-Day Course','All 30 Days of PelvisPower for Women: five Levels, twelve moves, a graduation certificate.',w,active='/women/')
 # ---------- Start here
 sh='<p class="kick">PelvisPower for Women</p><h1>Start Here</h1><p class="sub">What this book does for you, and how the month works</p><article>'
@@ -139,6 +139,7 @@ for n,d in DAYS.items():
         b+='<div class="cert"><h2>The Certificate of Pelvic Excellence</h2>'+''.join(f'<p>{E(x)}</p>' for x in lines[1:])+'<p class="c"><a class="btn alt" href="/women/leaders/">Become a leader</a></p></div>'
     prv=f'<a href="/women/day-{n-1:02d}/">← Day {n-1}</a>' if n>1 else '<a href="/women/start-here/">← Start Here</a>'
     nxt=f'<a href="/women/day-{n+1:02d}/">Day {n+1} →</a>' if n<30 else '<a href="/women/leaders/">Leaders →</a>'
+    b+=f'<p class="c noprint"><a class="btn alt" href="/women/journal/?day={n}#log">Log Day {n}</a></p>'
     b+=f'<div class="pn">{prv}<a href="/women/">All Days</a>{nxt}</div>'
     page(f'/women/day-{n:02d}/',f'Day {n}: {d["title"]} | PelvisPower for Women',d['sub'],b,active='/women/')
 # ---------- Chart (printable)
@@ -179,6 +180,7 @@ ld=f'''<p class="kick">For practitioners</p><h1>Lead the Journey</h1><p class="s
 page('/women/leaders/','Leaders and Classes | PelvisPower','How to lead PelvisPower in pairs, circles and small classes, plus the coming leader certification.',ld,active='/women/leaders/')
 # ---------- Men
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'build_men.py')).read())
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'build_journal.py')).read())
 # ---------- Together
 tg='''<p class="kick">Better together</p><h1>Train Together</h1><p class="sub">Same Day, same mats, big smiles</p><article>
 <h2>Side by side</h2><p>You and a partner train the same Day, one in PelvisPower for Women and one in PelvisPower for Men. Count each other's reps, cheer, and compare numbers over coffee.</p>

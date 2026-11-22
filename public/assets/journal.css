@@ -1,0 +1,13 @@
+.pj{font:16px/1.5 system-ui,sans-serif}.pj h2{font-family:Georgia,serif}
+.pj-warn{background:var(--rose);border:1px solid var(--gold);border-radius:10px;padding:10px 14px}
+.pj-private{background:var(--sand);border-radius:12px;padding:12px 16px;margin:0 0 18px}
+.pj-bar{height:8px;background:var(--rose);border-radius:99px;overflow:hidden;margin:6px 0 14px}.pj-bar i{display:block;height:100%;width:0;background:var(--gold)}
+.pj-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.pj-cell{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--gold);border-radius:10px;padding:6px 2px;cursor:pointer;display:flex;flex-direction:column;align-items:center;min-height:52px}.pj-cell span{font-size:11px;color:var(--mute)}.pj-cell.on{background:var(--rose)}.pj-cell.on span{color:var(--plum);font-weight:700}.pj-cell.cur{outline:2px solid var(--plum)}
+.pj label{display:block;font-weight:600;margin:12px 0 4px}.pj input[type=number],.pj select,.pj textarea{font:inherit;width:100%;max-width:100%;padding:10px;border:1px solid var(--gold);border-radius:10px;background:var(--bg);color:var(--ink)}.pj textarea{min-height:84px}
+.pj .row{display:flex;gap:10px;flex-wrap:wrap}.pj .row>div{flex:1;min-width:120px}.pj label.chk{display:flex;gap:8px;align-items:center;font-weight:600;margin:12px 0}.pj .chk input{width:20px;height:20px}
+.pj-entries{list-style:none;padding:0}.pj-entries li{border-bottom:1px solid var(--rose);padding:8px 0}.pj-dial{background:var(--rose);border-radius:99px;padding:1px 8px;font-size:12px;margin-left:6px}
+.pj table{width:100%;border-collapse:collapse}.pj th,.pj td{border:1px solid var(--gold);padding:8px;text-align:left}.pj td input[type=number]{width:90px}.pj-diff{font-weight:700}.pj-diff.up{color:#1f7a3e}.pj-diff.down{color:#b3412e}
+.pj-timer{text-align:center;border:2px solid var(--gold);border-radius:18px;padding:22px 10px;margin:14px 0;background:var(--sand)}.pj-timer.in{background:var(--rose)}.pj-timer.out{background:var(--bg)}.pj-phase{font:600 26px Georgia,serif;color:var(--plum)}.pj-left{font:700 64px/1.1 system-ui,sans-serif}.pj-rep{color:var(--mute)}
+.pj .opts{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0}.pj .opts label{display:flex;gap:6px;align-items:center;margin:0;font-weight:400}.pj .opts input{width:auto}
+.bookbox{border:1px solid var(--gold);border-radius:14px;padding:14px 16px;margin:24px 0;text-align:center}
+@media print{.pj-timer,.pj-btns,.noprint{display:none!important}}

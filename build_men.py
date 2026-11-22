@@ -41,7 +41,7 @@ _lv = ''.join(f'<section class="lvl"><h2>Level {L["n"]}: {E(L["name"])}</h2><p c
 _land = '''<p class="kick">PelvisPower for Men</p><h1>The 30-Day Course</h1><p class="sub">The same month, for the muscles men have too</p><article>
 <p>Men have a pelvic floor, and it does a great deal. It supports sexual function, helps with control and stamina, and takes part in orgasm. It can be trained, and the training is friendly and discreet.</p>
 <p>Three to ten minutes a day, in thin comfortable clothes. Light, funny and never clinical, with a Pleasure Dial from 1 to 5 and a reward that you set yourself. Every Day is open to read. Take them in order or wander.</p>
-<p class="c"><a class="btn" href="/men/start-here/">Start here</a> <a class="btn alt" href="/men/dozen/">The Daily Dozen</a></p></article></main><main class="wide">''' + _lv + '''<article><h2>Train with her</h2><p>Many couples train in parallel, one in each book, and compare numbers over breakfast. See <a href="/two/">Together</a> and <a href="/women/">PelvisPower for Women</a>.</p>
+<p class="c"><a class="btn" href="/men/start-here/">Start here</a> <a class="btn alt" href="/men/dozen/">The Daily Dozen</a> <a class="btn alt" href="/men/journal/">Journal and timer</a></p></article></main><main class="wide">''' + _lv + '''<article><h2>Train with her</h2><p>Many couples train in parallel, one in each book, and compare numbers over breakfast. See <a href="/two/">Together</a> and <a href="/women/">PelvisPower for Women</a>.</p>
 <h2>The longer game</h2><p>A companion book is on the way: <i>Well-Suited to Pleasure: The Long Game for Male Sexual Performance</i>. Well-suited means the trunk stays suited for most of the day. The Long Game is stamina and control.</p></article>'''
 page('/men/', 'PelvisPower for Men | 30-Day Course', 'All 30 Days of PelvisPower for Men: five Levels, twelve moves, a graduation diploma.', _land, active='/men/')
 
@@ -84,5 +84,6 @@ for n, d in MDAYS.items():
         b += '<div class="cert"><h2>The Certificate of Pelvic Excellence</h2>' + ''.join(f'<p>{E(x)}</p>' for x in _ls[1:]) + '<p class="c"><a class="btn alt" href="/women/leaders/">Become a leader</a></p></div>'
     prv = f'<a href="/men/day-{n-1:02d}/">← Day {n-1}</a>' if n > 1 else '<a href="/men/start-here/">← Start Here</a>'
     nxt = f'<a href="/men/day-{n+1:02d}/">Day {n+1} →</a>' if n < 30 else '<a href="/women/leaders/">Leaders →</a>'
+    b += f'<p class="c noprint"><a class="btn alt" href="/men/journal/?day={n}#log">Log Day {n}</a></p>'
     b += f'<div class="pn">{prv}<a href="/men/">All Days</a>{nxt}</div>'
     page(f'/men/day-{n:02d}/', f'Day {n}: {d["title"]} | PelvisPower for Men', d['sub'], b, active='/men/')
