@@ -54,7 +54,7 @@ def page(path,title,desc,body,active='',main_class=''):
 <header class="top"><a class="brand" href="/th/">PelvisPower</a><nav>{nav(active)}</nav>{'' if path=='/404.html' else i18n.switcher(full,'th')}</header>
 <div id="agegate" hidden><div><h2>สำหรับผู้ใหญ่เท่านั้น</h2><p>เว็บไซต์นี้สำหรับผู้อ่านอายุ 18 ปีขึ้นไป และพูดถึงความสุขทางเพศและสุขภาพทางเพศ</p><button id="yes">ฉันอายุ 18 ปีขึ้นไป</button> <a href="https://www.google.com">ออกจากเว็บไซต์</a></div></div>
 <main class="{main_class}">{body}</main>
-<footer><p>PelvisPower โดย R. J. Koret ส่วนหนึ่งของ <a href="https://carnal.nowlej.com/">Carnal NOWlej</a> เล่มคู่กับ <a href="https://dressforcaress.com/">Dress for Caress</a></p>
+<footer><p>PelvisPower โดย Georgia Gamajova ส่วนหนึ่งของ <a href="https://carnal.nowlej.com/">Carnal NOWlej</a> เล่มคู่กับ <a href="https://dressforcaress.com/">Dress for Caress</a></p>
 <p>นี่คือคู่มือออกกำลังกายและความสุขที่เป็นมิตร ไม่ใช่สิ่งทดแทนการดูแลทางการแพทย์ หากมีอาการปวด เลือดออกโดยไม่ทราบสาเหตุ หรือรู้สึกถึงแรงกดในอุ้งเชิงกราน ควรพบนักกายภาพบำบัดอุ้งเชิงกรานหรือแพทย์</p></footer>
 <script src="/assets/site.js"></script></body></html>'''
     p=os.path.join(OUT,full.strip('/'),'index.html') if path!='/404.html' else os.path.join(OUT,'th','404.html')

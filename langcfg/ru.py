@@ -1,7 +1,7 @@
 T=dict(
 dir='ltr',nav_women='Женщины',nav_men='Мужчины',nav_two='Вдвоём',nav_leaders='Ведущие',
 gate_h='Только для взрослых',gate_p='Этот сайт для читателей от 18 лет и говорит о сексуальном удовольствии и сексуальном здоровье.',gate_yes='Мне есть 18 лет',gate_leave='Уйти',
-foot1='PelvisPower, автор R. J. Koret. Часть <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Спутник <a href="https://dressforcaress.com/">Dress for Caress</a> (на английском).',
+foot1='PelvisPower, автор Georgia Gamajova. Часть <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Спутник <a href="https://dressforcaress.com/">Dress for Caress</a> (на английском).',
 foot2='Это дружелюбный гид по упражнениям и удовольствию, и он не заменяет медицинскую помощь. Боль, необъяснимое кровотечение или давление в тазу заслуживают визита к физиотерапевту тазового дна или к врачу.',
 t_home='PelvisPower | Курс сексерсайза на 30 дней',d_home='Тренируй мышцы, которые управляют твоим удовольствием. Дружелюбный 30-дневный курс для тазового дна с двенадцатью простыми движениями.',
 recess='Перемена',day='День {n}',dayshort='{n}',level='Уровень {n}: {name}',levelshort='Уровень {n}',

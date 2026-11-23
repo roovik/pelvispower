@@ -1,7 +1,7 @@
 T=dict(
 dir='ltr',nav_women='Mulheres',nav_men='Homens',nav_two='Juntos',nav_leaders='Guias',
 gate_h='Somente para adultos',gate_p='Este site é para leitores com 18 anos ou mais e fala de prazer sexual e saúde sexual.',gate_yes='Tenho 18 anos ou mais',gate_leave='Sair',
-foot1='PelvisPower, por R. J. Koret. Parte da <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Companheiro de <a href="https://dressforcaress.com/">Dress for Caress</a> (em inglês).',
+foot1='PelvisPower, por Georgia Gamajova. Parte da <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Companheiro de <a href="https://dressforcaress.com/">Dress for Caress</a> (em inglês).',
 foot2='Este é um guia amigável de exercício e prazer e não substitui o atendimento médico. Dor, sangramento sem explicação ou pressão na pelve merecem uma visita a um fisioterapeuta de assoalho pélvico ou a um médico.',
 t_home='PelvisPower | Um curso de sexercício de 30 dias',d_home='Treine os músculos que comandam o seu prazer. Um curso amigável de 30 dias para o assoalho pélvico, com doze movimentos simples.',
 recess='Recreio',day='Dia {n}',dayshort='{n}',level='Nível {n}: {name}',levelshort='Nível {n}',

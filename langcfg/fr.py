@@ -2,7 +2,7 @@ P='/fr'
 T=dict(
 dir='ltr',nav_women='Femmes',nav_men='Hommes',nav_two='Ensemble',nav_leaders='Animatrices',
 gate_h='Réservé aux adultes',gate_p="Ce site s'adresse aux lecteurs de 18 ans et plus et parle de plaisir sexuel et de santé sexuelle.",gate_yes="J'ai 18 ans ou plus",gate_leave='Quitter',
-foot1='PelvisPower, par R. J. Koret. Fait partie de <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Complément de <a href="https://dressforcaress.com/">Dress for Caress</a> (en anglais).',
+foot1='PelvisPower, par Georgia Gamajova. Fait partie de <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Complément de <a href="https://dressforcaress.com/">Dress for Caress</a> (en anglais).',
 foot2="Ce guide amical de forme et de plaisir ne remplace pas des soins médicaux. Une douleur, des saignements inexpliqués ou une pression pelvienne méritent une visite chez un kinésithérapeute du plancher pelvien ou chez un médecin.",
 t_home='PelvisPower | Un cours de sexercice en 30 jours',d_home="Entraînez les muscles qui commandent votre plaisir. Un cours amical de 30 jours pour le plancher pelvien, avec douze mouvements simples.",
 recess='Récré',day='Jour {n}',dayshort='{n}',level='Niveau {n} : {name}',levelshort='Niveau {n}',

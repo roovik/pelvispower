@@ -1,7 +1,7 @@
 T=dict(
 dir='rtl',nav_women='נשים',nav_men='גברים',nav_two='ביחד',nav_leaders='מנחות',
 gate_h='למבוגרים בלבד',gate_p='האתר הזה מיועד לקוראות וקוראים בני 18 ומעלה ועוסק בהנאה מינית ובבריאות מינית.',gate_yes='אני בת או בן 18 ומעלה',gate_leave='יציאה',
-foot1='PelvisPower, מאת R. J. Koret. חלק מ <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. ספר לוואי של <a href="https://dressforcaress.com/">Dress for Caress</a> (באנגלית).',
+foot1='PelvisPower, מאת Georgia Gamajova. חלק מ <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. ספר לוואי של <a href="https://dressforcaress.com/">Dress for Caress</a> (באנגלית).',
 foot2='זהו מדריך ידידותי לתרגול והנאה, והוא לא מחליף טיפול רפואי. כאב, דימום בלתי מוסבר או לחץ באגן ראויים לביקור אצל פיזיותרפיסטית לרצפת האגן או אצל רופא.',
 t_home='PelvisPower | קורס סקסרסייז של 30 יום',d_home='התאמנו את השרירים שמנהלים את ההנאה. קורס ידידותי של 30 יום לרצפת האגן עם שתים עשרה תנועות פשוטות.',
 recess='הפסקה',day='יום {n}',dayshort='{n}',level='רמה {n}: {name}',levelshort='רמה {n}',

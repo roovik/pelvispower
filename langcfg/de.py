@@ -1,7 +1,7 @@
 T=dict(
 dir='ltr',nav_women='Frauen',nav_men='Männer',nav_two='Gemeinsam',nav_leaders='Leiterinnen',
 gate_h='Nur für Erwachsene',gate_p='Diese Seite ist für Leserinnen und Leser ab 18 Jahren und spricht über sexuelles Vergnügen und sexuelle Gesundheit.',gate_yes='Ich bin 18 oder älter',gate_leave='Verlassen',
-foot1='PelvisPower, von R. J. Koret. Teil von <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Begleiter von <a href="https://dressforcaress.com/">Dress for Caress</a> (auf Englisch).',
+foot1='PelvisPower, von Georgia Gamajova. Teil von <a href="https://carnal.nowlej.com/">Carnal NOWlej</a>. Begleiter von <a href="https://dressforcaress.com/">Dress for Caress</a> (auf Englisch).',
 foot2='Das ist ein freundlicher Fitness- und Vergnügensratgeber und kein Ersatz für medizinische Versorgung. Schmerzen, ungeklärte Blutungen oder Druck im Becken verdienen einen Besuch bei einer Beckenboden-Physiotherapeutin oder bei einem Arzt.',
 t_home='PelvisPower | Ein 30-Tage-Sexercise-Kurs',d_home='Trainiere die Muskeln, die dein Vergnügen steuern. Ein freundlicher 30-Tage-Kurs für den Beckenboden mit zwölf einfachen Bewegungen.',
 recess='Pause',day='Tag {n}',dayshort='{n}',level='Level {n}: {name}',levelshort='Level {n}',
