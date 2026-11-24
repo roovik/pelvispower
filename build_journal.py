@@ -3,6 +3,7 @@ import json as _j
 _BL=_j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'booklinks.json')))
 def _bookbox(key):
     l=_BL.get(key,{}); bt=''
+    if l.get('kindle'): bt+=f'<a class="btn" href="{E(l["kindle"])}" rel="noopener">Get the Kindle edition</a>'
     if l.get('paperback'): bt+=f'<a class="btn" href="{E(l["paperback"])}" rel="noopener">Get the paperback</a>'
     if l.get('pdf'): bt+=f'<a class="btn alt" href="{E(l["pdf"])}" rel="noopener">Get the PDF edition</a>'
     if not bt: return ''

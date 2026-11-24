@@ -1,4 +1,12 @@
 {
-  "women": {"paperback": "", "pdf": ""},
-  "men":   {"paperback": "https://www.amazon.com/dp/B0HSLX5PNQ", "pdf": ""}
+  "women": {
+    "paperback": "",
+    "pdf": "",
+    "kindle": "https://www.amazon.com/dp/B0HSP2V7HX"
+  },
+  "men": {
+    "paperback": "https://www.amazon.com/dp/B0HSLX5PNQ",
+    "pdf": "",
+    "kindle": ""
+  }
 }
